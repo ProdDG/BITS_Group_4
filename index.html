@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script> 
+</head>
+<body>
+    <div class="model-container">
+        <model-viewer id="floor1" src="1F.gltf" alt="Floor 1 Model" shadow-intensity="1" camera-controls auto-rotate></model-viewer>
+    </div>
+
+    <!--Scripts to help old browsers load model-->
+	<script type="module"
+		src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+	</script>
+	<script nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+	</script>
+</body>
+</html>
