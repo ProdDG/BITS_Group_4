@@ -10,6 +10,8 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
   </head>
   <body>
     <header class="py-3 mb-3 border-bottom">
@@ -44,7 +46,7 @@
         </div>
 
         <div class="d-flex align-items-center">
-          <form class="w-100 me-3" role="search" >
+          <form class="w-100 me-3" role="search">
             <input
               type="search"
               class="form-control"
@@ -57,7 +59,7 @@
             <a
               href="#"
               class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
-              data-bs-toggle="dropdown" 
+              data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               <img
@@ -79,7 +81,16 @@
         </div>
       </div>
     </header>
-
+    <div class="model-container">
+      <model-viewer
+        id="floor1"
+        src="1F.gltf"
+        alt="Floor 1 Model"
+        shadow-intensity="1"
+        camera-controls
+        auto-rotate
+      ></model-viewer>
+    </div>
     <!-- Bootstrap JavaScript and Popper.js -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
@@ -90,6 +101,15 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
+    ></script>
+    <!--Scripts to help old browsers load model-->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
     ></script>
   </body>
 </html>
