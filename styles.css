@@ -66,3 +66,45 @@ model-viewer{
         display: flex;
     }
 }
+
+#scrollButton {
+    display: none;
+    position: fixed;
+    top: 50vh; /* Adjusted to 50vh for vertical center */
+    right: 0;
+    transform: translateY(-50%);
+    /* padding: 10px; */
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.half-circle-button {
+    width: 20px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    border-top-left-radius: 20px; /* Half of the height to create a half-circle effect */
+    border-bottom-left-radius: 20px; /* Half of the height to create a half-circle effect */
+    background-color: #007bff; /* Set your desired background color */
+    border: none;
+}
+
+.floor-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.floor-button {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    margin-bottom: 30px; /* Adjust the spacing between buttons */
+    background-color: #007bff; /* Set your desired background color */
+    border: none;
+    color: #fff; /* Set your desired text color */
+    cursor: pointer;
+}
+
+/* .offcanvas-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
