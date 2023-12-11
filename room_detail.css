@@ -1,0 +1,114 @@
+/* Style the navigation bar container */
+.navbar {
+    overflow: hidden;
+    background-color: #940000;
+    box-shadow: 0px 0px 5px #940000;
+    z-index: 2;
+}
+
+/* Style the navigation bar logo */
+.navbar a.logo {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a.logo img{
+    width: 10em;
+}
+
+/* Style the navigation bar website name */
+.navbar p.navbar-website-name {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Style the navigation bar menu */
+.navbar .nav-menu {
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .navmenu a {
+    display: inline-block;
+    color: #f2f2f2;
+    width: 33.333%;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+/* Change color on hover */
+.navbar .navmenu a:hover {
+    font-weight: bold;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.underlineAnimation {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.underlineAnimation:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #ddd;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.underlineAnimation:hover:after {
+    transform: scaleX(1);
+}
+
+.room-img{
+    height:50vh;
+}
+
+.carousel-item img{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: inherit;
+}
+
+button.carousel-control-prev{
+    background: linear-gradient(to right,rgba(0,0,0,0.1),rgba(0,0,0,0));
+}
+
+button.carousel-control-next{
+    background: linear-gradient(to left,rgba(0,0,0,0.1),rgba(0,0,0,0));
+}
+
+.title{
+    padding: 5vh 15em;
+}
+
+.title span{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description img{
+    max-width: 100%;
+    height: auto;
+}
