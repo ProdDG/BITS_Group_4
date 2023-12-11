@@ -38,7 +38,7 @@ body {
     height: 900px;
 };
 
-#floor1{
+#modeldisplay{
     height: inherit;
     width: inherit; 
     background-color: lightgray;

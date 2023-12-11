@@ -57,3 +57,12 @@ toggleScrollButton();
 //     // Adjust the top position based on your preference
 //     button.style.top = (scrollY + window.innerHeight - button.offsetHeight - 20) + "px";
 // }
+
+function changeModel(num){
+    var modelviewer = document.getElementById("modeldisplay")
+    if (num == 1) {
+      modelviewer.src = "1F.gltf"
+    } else if (num == 2){
+      modelviewer.src = "2F.gltf"
+    }
+}
