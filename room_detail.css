@@ -81,7 +81,19 @@
 }
 
 .room-img{
-    height:50vh;
+    height:80vh;
+}
+
+.carousel-item{
+    height: inherit;
+}
+
+.carousel{
+    height: inherit;
+}
+
+.carousel-inner{
+    height: inherit;
 }
 
 .carousel-item img{
@@ -89,6 +101,11 @@
     margin-right: auto;
     max-width: 100%;
     height: inherit;
+}
+
+.title{
+    padding: 0 0 5vh 0;
+    font-size: 8rem;
 }
 
 button.carousel-control-prev{
@@ -99,16 +116,76 @@ button.carousel-control-next{
     background: linear-gradient(to left,rgba(0,0,0,0.1),rgba(0,0,0,0));
 }
 
-.title{
-    padding: 5vh 15em;
+.description img{
+    max-width: 100%;
+    height: auto;
 }
 
-.title span{
+button#learn-more{
+    color: #000;
+    background-color: whitesmoke;
+    transition-duration: 0.25s;
+}
+
+button#learn-more:hover{
+    transition: ease-in-out;
+    color: #ddd;
+    background-color: #940000;
+    transition-duration: 0.25s;
+}
+
+i#search-icon{
+    color:#f2f2f2;
+    font-size: x-large;
+}
+
+input[type="search"]:focus-visible{
+    outline: none;
+}
+
+.photo{
+    flex-grow: 1;
+    border:#000 1px solid;
+    place-items: center;
+    display: grid;
+}
+
+.photo img{
     margin-left: auto;
     margin-right: auto;
 }
 
-.description img{
-    max-width: 100%;
-    height: auto;
+#see-more{
+    place-items: center;
+    height: 25vh;
+    transition-duration: 0.2s;
+}
+
+#see-more a:hover{
+    font-weight: bold;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.underlineAnimation2 {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.underlineAnimation2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #940000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.underlineAnimation2:hover:after {
+    transform: scaleX(1);
 }
