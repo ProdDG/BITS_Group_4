@@ -127,7 +127,7 @@ button.carousel-control-next{
 
 button#learn-more{
     color: #000;
-    background-color: whitesmoke;
+    outline: #000 1px solid;
     transition-duration: 0.25s;
 }
 
@@ -136,6 +136,7 @@ button#learn-more:hover{
     color: #ddd;
     background-color: #940000;
     transition-duration: 0.25s;
+    outline: none;
 }
 
 i#search-icon{
