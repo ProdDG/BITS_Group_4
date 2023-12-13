@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
 }
 
 .menu-toggle {
@@ -85,6 +84,8 @@ model-viewer{
     border-bottom-left-radius: 20px; /* Half of the height to create a half-circle effect */
     background-color: #007bff; /* Set your desired background color */
     border: none;
+    position: sticky;
+    right: 0;
 }
 
 .floor-buttons-container {
@@ -108,3 +109,39 @@ model-viewer{
     justify-content: center;
     align-items: center;
 } */
+
+#welcomebanner{
+    height: 80vh;
+}
+
+#welcome-img{
+    z-index: -1;
+    height: inherit;
+}
+
+#welcomebanner img{
+    width: 100%;
+    filter: brightness(0.4);
+    aspect-ratio: 14/9;
+}
+
+#welcometext{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-100%);
+}
+
+#discover{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-55%,25vh);
+    font-weight: lighter;
+    border: none;
+}
+
+#discover:hover{
+    border: solid 2px white;
+    font-weight: 300;
+}
