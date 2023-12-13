@@ -100,7 +100,6 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
-    height: inherit;
 }
 
 .title{
@@ -118,7 +117,12 @@ button.carousel-control-next{
 
 .description img{
     max-width: 100%;
-    height: auto;
+    height: 100%;
+}
+
+.caption{
+    text-align: center;
+    font-style: italic;
 }
 
 button#learn-more{
@@ -139,13 +143,12 @@ i#search-icon{
     font-size: x-large;
 }
 
-input[type="search"]:focus-visible{
+input[type="text"]:focus-visible{
     outline: none;
 }
 
 .photo{
     flex-grow: 1;
-    border:#000 1px solid;
     place-items: center;
     display: grid;
 }
