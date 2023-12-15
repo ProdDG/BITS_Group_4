@@ -140,8 +140,3 @@ model-viewer{
     font-weight: lighter;
     border: none;
 }
-
-#discover:hover{
-    border: solid 2px white;
-    font-weight: 300;
-}
