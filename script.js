@@ -24,19 +24,19 @@ function scrollToSection() {
 var scrollButton = document.getElementById("scrollButton");
 var modelElement = document.getElementById("model");
 
-// function toggleScrollButton() {
-//     var modelRect = modelElement.getBoundingClientRect();
+function toggleScrollButton() {
+var modelRect = modelElement.getBoundingClientRect();
 
-//     // Check if the model element is NOT fully in the viewport
-//     if (
-//         modelRect.top < 0 ||
-//         modelRect.bottom > (window.innerHeight || document.documentElement.clientHeight)
-//     ) {
-//         scrollButton.style.display = "none"; // Hide the button
-//     } else {
-//         scrollButton.style.display = "block"; // Show the button
-//     }
-// }
+// Check if the model element is NOT fully in the viewport
+if (
+    modelRect.top < 0 ||
+    modelRect.bottom > (window.innerHeight || document.documentElement.clientHeight)
+) {
+    scrollButton.style.display = "none"; // Hide the button
+} else {
+    scrollButton.style.display = "block"; // Show the button
+}
+}
 
 function handleScroll() {
     toggleScrollButton();
@@ -59,10 +59,31 @@ toggleScrollButton();
 // }
 
 function changeModel(num){
-    var modelviewer = document.getElementById("modeldisplay")
+    var modelviewer = document.getElementById("modeldisplay");
+    var F1 = document.getElementsByClassName("F1");
+    var F2 = document.getElementsByClassName("F2");
+
     if (num == 1) {
       modelviewer.src = "1F.gltf"
+
+      for (const hspot of F1) {
+        hspot.style.visibility = 'visible';
+      }
+
+      for (const hspot of F2) {
+        hspot.style.visibility = 'hidden';
+      }
+
     } else if (num == 2){
       modelviewer.src = "2F.gltf"
+
+      for (const hspot of F1) {
+        hspot.style.visibility = 'hidden';
+      }
+
+      for (const hspot of F2) {
+        hspot.style.visibility = 'visible';
+      }
+
     }
 }

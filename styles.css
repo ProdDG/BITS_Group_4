@@ -145,3 +145,20 @@ model-viewer{
     border: solid 2px white;
     font-weight: 300;
 }
+
+.Hotspot{
+    visibility: hidden;
+
+}
+
+.F1{
+    visibility: visible;
+    padding: 5px;
+    background: white;
+}
+
+.F2{
+    visibility: hidden;
+    padding: 5px;
+    background: white;
+}
