@@ -137,7 +137,7 @@ button.carousel-control-next{
 
 button#learn-more{
     color: #000;
-    outline: #000 1px solid;
+    /* outline: #000 1px solid; */
     transition-duration: 0.25s;
 }
 
