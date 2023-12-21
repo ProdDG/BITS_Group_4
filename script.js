@@ -64,7 +64,7 @@ function changeModel(num){
     var F2 = document.getElementsByClassName("F2");
 
     if (num == 1) {
-      modelviewer.src = "1F.gltf"
+      modelviewer.src = "Models/1F.gltf"
 
       for (const hspot of F1) {
         hspot.style.visibility = 'visible';
@@ -75,7 +75,7 @@ function changeModel(num){
       }
 
     } else if (num == 2){
-      modelviewer.src = "2F.gltf"
+      modelviewer.src = "Models/2F.gltf"
 
       for (const hspot of F1) {
         hspot.style.visibility = 'hidden';

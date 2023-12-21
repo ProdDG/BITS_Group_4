@@ -203,3 +203,8 @@ input[type="text"]:focus-visible{
 .underlineAnimation2:hover:after {
     transform: scaleX(1);
 }
+
+model-viewer.location{
+    height: 60vh;
+    border: solid black 2px;
+}
