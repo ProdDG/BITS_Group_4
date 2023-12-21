@@ -1,3 +1,5 @@
+// const { keyword } = require("color-convert");
+
 document.addEventListener("DOMContentLoaded", function () {
   // Wait for the DOM to be fully loaded before adding the event listener
 
@@ -86,4 +88,55 @@ function changeModel(num){
       }
 
     }
+}
+
+let keywords = [
+  'Library',
+  'Classroom',
+  'Mac Lab',
+  'Windows Lab',
+  'Duo OS Lab',
+  'Self Study Room',
+  'Innovation Hub',
+  'Gym',
+  'Reception',
+  'Security',
+  'Design Studio',
+  'Collaboration Study Space',
+  'Teacher & Research',
+  'T&H Management Classroom',
+  'SAS',
+  'Financial Trading Lab',
+  'Canteen',
+  'AV Theatre',
+  'Student Connect',
+  'Wellbeing',
+  'Office',
+];
+
+const resultsBox = document.querySelector(".result-box");
+const inputBox = document.getElementById("input-box");
+
+inputBox.onkeyup = function(){
+  let result = [];
+  let input = inputBox.value;
+  if(input.length){
+    result = keywords.filter((keyword)=>{
+      return keyword.toLowerCase().includes(input.toLowerCase());
+    });
+    console.log(result)
+  }
+  display(result);
+
+  if(!result.length){
+    resultsBox.innerHTML = '';
+  }
+}
+
+function display(result){
+  const content = result.map((list)=>{
+    return "<li>" + list + "</li>";
+  });
+
+  resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
 }

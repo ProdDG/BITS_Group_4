@@ -3,62 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
     <title>RMIT Interactive Map</title>
-    <link rel="icon" type="image/x-icon" href="Media/favicon.jpg">
+    <link rel="icon" type="image/x-icon" href="Media/favicon.jpg" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
-    <link href="styles.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="room_detail.css">
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="room_detail.css" />
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
-    <script src="https://kit.fontawesome.com/428f8b3ba7.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/428f8b3ba7.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <nav class="navbar">
-          <div class="col-2 d-flex justify-content-center logo">
-              <a href="index.html" class="logo">
-                  <img src="Media/RMIT_University_Logo_White.png" alt="RMIT_University_Logo">
-              </a>
+        <div class="col-2 d-flex justify-content-center logo">
+          <a href="index.html" class="logo">
+            <img
+              src="Media/RMIT_University_Logo_White.png"
+              alt="RMIT_University_Logo"
+            />
+          </a>
+        </div>
+        <div class="col-6">
+          <div class="search-box">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  autocomplete="off"
+                  class="w-100 p-2 rounded-2 border-0 search-input"
+                  id="input-box"
+                />
+              </div>
+              <div class="col-3">
+                <button class="rounded bg-transparent border-0 px-3 mt-2">
+                  <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                </button>
+              </div>
+            </div>
+            <div class="result-box">
+            </div>
           </div>
-          <div class="col-6">
-              <form class="p-2 search">
-                  <input type="text" placeholder="Search" class="w-75 p-2 rounded-2 border-0 offset-1 search-input">
-                  <button class="rounded bg-transparent border-0 px-3 mt-2">
-                      <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
-                  </button>
-              </form>
-              
-              
-          </div>
-          
-          <div class="col-4 d-flex navmenu">
-              <a href="index.html" class="underlineAnimation">Home</a>
-              <a href="#home" class="underlineAnimation">About Us</a>
-              <a href="#home" class="underlineAnimation">Contact</a>
-          </div>
+        </div>
+
+        <div class="col-4 d-flex navmenu">
+          <a href="index.html" class="underlineAnimation">Home</a>
+          <a href="#home" class="underlineAnimation">About Us</a>
+          <a href="#home" class="underlineAnimation">Contact</a>
+        </div>
       </nav>
-  </header>
-  <section class="container-fluid w-100 px-0" id="welcomebanner">
-    <div id="welcome-img">
-      <img src="Media/RMIT_INDX.jpg" alt="">
-    </div>
-    <div id="welcometext" class="text-center">
-      <span class="display-1 fw-bold text-light">
-        Welcome to RMIT
-      </span>
-      <h4 class="text-light pt-4">
-        RMIT is a global university of technology, design and enterprise with over 18,000 international students at RMIT University, one of the top universities in Australia.
-      </h4>
-    </div>
-    <a href="room_detail.html" class="btn">
-      <button type="button" class="rounded-2 p-2 bg-transparent text-light fs-4 px-3 underlineAnimation" id="discover">
-        <i class="fa-solid fa-map-location-dot text-light"></i> <span>Room Details</span>
-      </button> 
-    </a>
-  </section>
+    </header>
+    <section class="container-fluid w-100 px-0" id="welcomebanner">
+      <div id="welcome-img">
+        <img src="Media/RMIT_INDX.jpg" alt="" />
+      </div>
+      <div id="welcometext" class="text-center">
+        <span class="display-1 fw-bold text-light"> Welcome to RMIT </span>
+        <h4 class="text-light pt-4">
+          RMIT is a global university of technology, design and enterprise with
+          over 18,000 international students at RMIT University, one of the top
+          universities in Australia.
+        </h4>
+      </div>
+      <a href="room_detail.html" class="btn">
+        <button
+          type="button"
+          class="rounded-2 p-2 bg-transparent text-light fs-4 px-3 underlineAnimation"
+          id="discover"
+        >
+          <i class="fa-solid fa-map-location-dot text-light"></i>
+          <span>Room Details</span>
+        </button>
+      </a>
+    </section>
     <div id="scrollButton">
       <button
         class="half-circle-button"
@@ -78,18 +105,17 @@
       aria-labelledby="offcanvasWithBothOptionsLabel"
     >
       <div class="offcanvas-header">
-        <div style="text-align: center; width: 100%;">
+        <div style="text-align: center; width: 100%">
           <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
             Changing Floors
           </h5>
         </div>
         <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="offcanvas"
-        aria-label="Close"
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
         ></button>
-
       </div>
       <div class="offcanvas-body">
         <div class="floor-buttons-container">
@@ -118,21 +144,28 @@
         disable-zoom
         disable-pan
       >
-      <!-- Floor 1 -->
-        <button class="Hotspot" id="cashier" slot="hotspot-cashier" data-position="48.47954236235449m 0m -7.036493645037524m" data-normal="2.0780711945634374e-23m 1m -6.123235510715617e-17m">
-            <div class="F1">
-                Cashier
-            </div>
+        <!-- Floor 1 -->
+        <button
+          class="Hotspot"
+          id="cashier"
+          slot="hotspot-cashier"
+          data-position="48.47954236235449m 0m -7.036493645037524m"
+          data-normal="2.0780711945634374e-23m 1m -6.123235510715617e-17m"
+        >
+          <div class="F1">Cashier</div>
         </button>
 
-      <!-- Floor 2 -->
-        <button class="Hotspot" id="library" slot="hotspot-library" data-position="25.564801330341727m 7.105427357601002e-15m -17.12106460518583m" data-normal="-3.7021225344847627e-17m 1m 2.1642602185734502e-16m">
-            <div class="F2">
-                Library
-            </div>
+        <!-- Floor 2 -->
+        <button
+          class="Hotspot"
+          id="library"
+          slot="hotspot-library"
+          data-position="25.564801330341727m 7.105427357601002e-15m -17.12106460518583m"
+          data-normal="-3.7021225344847627e-17m 1m 2.1642602185734502e-16m"
+        >
+          <div class="F2">Library</div>
         </button>
-
-    </model-viewer> 
+      </model-viewer>
     </div>
     <!-- Bootstrap JavaScript and Popper.js -->
     <script

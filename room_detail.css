@@ -6,7 +6,7 @@ header{
 
 /* Style the navigation bar container */
 .navbar {
-    overflow: hidden;
+    
     background-color: #940000;
     box-shadow: 0px 0px 5px #940000;
     z-index: 2;
