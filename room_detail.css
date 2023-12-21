@@ -114,11 +114,11 @@ header{
 }
 
 button.carousel-control-prev{
-    background: linear-gradient(to right,rgba(0,0,0,0.1),rgba(0,0,0,0));
+    background: linear-gradient(to right,rgba(0,0,0,0.5),rgba(0,0,0,0));
 }
 
 button.carousel-control-next{
-    background: linear-gradient(to left,rgba(0,0,0,0.1),rgba(0,0,0,0));
+    background: linear-gradient(to left,rgba(0,0,0,0.5),rgba(0,0,0,0));
 }
 
 .description img{
@@ -137,7 +137,7 @@ button.carousel-control-next{
 
 button#learn-more{
     color: #000;
-    outline: #000 1px solid;
+    outline: gray 1px solid;
     transition-duration: 0.25s;
 }
 
@@ -162,6 +162,7 @@ input[type="text"]:focus-visible{
     flex-grow: 1;
     place-items: center;
     display: grid;
+    width: 20%;
 }
 
 .photo img{
@@ -202,4 +203,19 @@ input[type="text"]:focus-visible{
 
 .underlineAnimation2:hover:after {
     transform: scaleX(1);
+}
+
+model-viewer.location{
+    height: 60vh;
+    border: solid black 2px;
+}
+
+.carousel-inner img{
+    transform: translateY(-20%);
+    filter: brightness(0.8);
+}
+
+section.gallery img{
+    width: 100%;
+    height: auto;
 }

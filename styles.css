@@ -34,19 +34,18 @@ body {
 
 .model-container{
     width: 100%;
-    height: 900px;
-};
+}
 
 #modeldisplay{
-    height: inherit;
+    height: 90vh!important;
     width: inherit; 
-    background-color: lightgray;
+    background-color: white;
 }
 
 model-viewer{
-    height: inherit;
+    height: 90vh;
     width: inherit;
-    background-color: lightgray;
+    background-color: white;
 };
 
 /* Media Query for Mobile */
@@ -142,7 +141,6 @@ model-viewer{
 }
 
 #discover:hover{
-    border: solid 2px white;
     font-weight: 300;
 }
 
