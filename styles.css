@@ -169,7 +169,7 @@ model-viewer{
 }
 
 .result-box{
-    max-height: 300px;;
+    max-height: 250px;;
     overflow-y: scroll;
     position: absolute;
     width: inherit;
@@ -222,3 +222,4 @@ input{
     font-size: 18px;
     color: #333;
 }
+
