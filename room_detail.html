@@ -18,22 +18,34 @@
     <header>
         <nav class="navbar">
             <div class="col-2 d-flex justify-content-center logo">
-                <a href="index.html" class="logo">
-                    <img src="Media/RMIT_University_Logo_White.png" alt="RMIT_University_Logo">
-                </a>
+            <a href="index.html" class="logo">
+                <img
+                src="Media/RMIT_University_Logo_White.png"
+                alt="RMIT_University_Logo"
+                />
+            </a>
             </div>
             <div class="col-6">
-                <form class="p-2 search">
-                    <input type="text" placeholder="Search" class="w-75 p-2 rounded-2 border-0 offset-1 search-input">
-                    <button class="rounded bg-transparent border-0 px-3 mt-2">
-                        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
-                    </button>
-                </form>
+                <div class="search-box">
+                    <div class="row">
+                        <div class="col-9">
+                            <input
+                            type="text"
+                            placeholder="Search"
+                            autocomplete="off"
+                            class="w-100 p-2 rounded-2 border-0 search-input"
+                            id="input-box"
+                            />
+                        </div>
+                    </div>
+                    <div class="result-box">
+                    </div>
+                </div>
             </div>
             <div class="col-4 d-flex navmenu">
-                <a href="index.html" class="underlineAnimation">Home</a>
-                <a href="#home" class="underlineAnimation">About Us</a>
-                <a href="#home" class="underlineAnimation">Contact</a>
+            <a href="index.html" class="underlineAnimation">Home</a>
+            <a href="#home" class="underlineAnimation">About Us</a>
+            <a href="#home" class="underlineAnimation">Contact</a>
             </div>
         </nav>
     </header>
@@ -178,7 +190,7 @@
             nomodule
             src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
             ></script>
-            <script src="script.js"></script>
+            <script src="searchbar.js"></script>
     </main>
     <footer>
 

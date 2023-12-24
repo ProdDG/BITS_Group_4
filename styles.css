@@ -110,7 +110,7 @@ model-viewer{
 }
 
 #welcomebanner{
-    height: 80vh;
+    height: 100vh;
 }
 
 #welcome-img{
@@ -203,6 +203,42 @@ button{
     outline: 0;
 }
 
+button.Hotspot div{
+    border-radius: 10px;
+}
+
+button.filter{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-color: #000054;
+    border-radius: 0 0 6px 6px;
+    text-align: center;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    box-sizing: border-box;
+    color: #fff;
+    font-weight: 600;
+    transition-duration: 0.5s;
+}
+
+button.filter:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+}
+
+button.filter:hover {
+    background-color: #0078FF;
+    transition-duration: 0.5s;
+}
+
+button.filter:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+}
+
+button.filter:active {
+    background-color: #247c3d;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
 button .fa-solid{
     color: red;
 }
@@ -223,3 +259,19 @@ input{
     color: #333;
 }
 
+#filter-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0.2rem;
+    grid-row-gap: 0px;
+}
+
+#clear-filter:hover{
+    background-color: #00C8AC;
+    transition-duration: 0.5s;
+}
+
+.filter.active{
+    background-color: #FAC800;
+}
