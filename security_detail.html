@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="room_detail.css">
+    <script src="https://kit.fontawesome.com/428f8b3ba7.js" crossorigin="anonymous"></script>
+    <title>Security Center</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="col-2 d-flex justify-content-center logo">
+                <a href="index.html" class="logo">
+                    <img src="Media/RMIT_University_Logo_White.png" alt="RMIT_University_Logo">
+                </a>
+            </div>
+            <div class="col-6">
+                <form class="p-2 search">
+                    <input type="text" placeholder="Search" class="w-75 p-2 rounded-2 border-0 offset-1 search-input">
+                    <button class="rounded bg-transparent border-0 px-3 mt-2">
+                        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="col-4 d-flex navmenu">
+                <a href="index.html" class="underlineAnimation">Home</a>
+                <a href="#home" class="underlineAnimation">About Us</a>
+                <a href="#home" class="underlineAnimation">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="room-img">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Media 2/SECURITY/" class="d-flex" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Media 2/SECURITY/" class="d-flex" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Media 2/SECURITY/" class="d-flex" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <br>
+        <section class="page-content pt-5">
+            <div class="container-fluid d-flex description">
+                <div class="container content col-6">
+                    <div class="title">
+                        <span class="fw-bold fst-italic display-1">
+                            Security Control Room 1.1.005
+                        </span>
+                    </div>
+                    <div class="container detail">
+                        <p class="fw-medium fs-4">
+                            The security control room is where security staffs monitor and manage the security and safety systems of RMIT Hanoi campus such as cameras, fire alarms, access control, registration, incident reports and lost and found service.
+                        </p>
+                        <ul>
+                            <li class="fs-6 fw-medium">
+                                Students can reclaim lost items in the Lost and Found unit.
+                            </li>
+                            <br>
+                            <li class="fs-6 fw-medium">
+                                Students can sign up for a alternative student card.
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.rmit.edu.vn/students/support/academic-success-support">
+                        <button class="fw-medium w-100 rounded-2 border-0 p-2 mt-5" id="learn-more">
+                            Learn More
+                        </button>
+                    </a>
+                    
+                </div>
+                <div class="container col-6 sub-img">
+                    <img src="Media 2/SECURITY/" alt="">
+                    <div class="caption">The Security Control Room is situated at a central location for the best convenience</div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery pt-5">
+            <div class="title">
+                <span>
+                    Gallery
+                </span>
+            </div>
+            <div class="container-fluid column-gap-5 row-gap-5 d-flex flex-wrap">
+                <div class="photo">
+                    <img src="Media 2/SECURITY/" alt="">
+                </div>
+                <div class="photo">
+                    <img src="Media 2/SECURITY/" alt="">
+                </div>
+                <div class="photo">
+                    <img src="Media 2/SECURITY/" alt="">
+                </div>
+                <div class="photo">
+                    <img src="Media 2/SECURITY/" alt="">
+                </div>
+            </div>
+            <div class="d-grid" id="see-more">
+                <a href="https://www.flickr.com/photos/154215421@N05/albums/" class="underlineAnimation2">
+                    More Photos
+                </a>
+            </div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
