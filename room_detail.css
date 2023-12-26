@@ -218,7 +218,7 @@ section.gallery img{
     height: auto;
 }
 
-#gallery-container{
+.gallery-container{
     display: grid;
     grid-template-columns: repeat(4, minmax(25vh, 1fr));
     grid-template-rows: 1fr;
