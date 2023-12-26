@@ -65,6 +65,13 @@ function changeModel(num){
     var F1 = document.getElementsByClassName("F1");
     var F2 = document.getElementsByClassName("F2");
 
+    for (const hspot of F1) {
+      hspot.style.visibility = 'hidden';
+    }
+    for (const hspot of F2) {
+      hspot.style.visibility = 'hidden';
+    }
+
     if (num == 1) {
       modelviewer.src = "Models/1F-colored.gltf"
 
@@ -72,16 +79,8 @@ function changeModel(num){
         hspot.style.visibility = 'visible';
       }
 
-      for (const hspot of F2) {
-        hspot.style.visibility = 'hidden';
-      }
-
     } else if (num == 2) {
       modelviewer.src = "Models/2F-coloredNhan.gltf"
-
-      for (const hspot of F1) {
-        hspot.style.visibility = 'hidden';
-      }
 
       for (const hspot of F2) {
         hspot.style.visibility = 'visible';
