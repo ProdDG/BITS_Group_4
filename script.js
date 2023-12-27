@@ -64,11 +64,15 @@ function changeModel(num){
     var modelviewer = document.getElementById("modeldisplay");
     var F1 = document.getElementsByClassName("F1");
     var F2 = document.getElementsByClassName("F2");
+    var F3 = document.getElementsByClassName("F3");
 
     for (const hspot of F1) {
       hspot.style.visibility = 'hidden';
     }
     for (const hspot of F2) {
+      hspot.style.visibility = 'hidden';
+    }
+    for (const hspot of F3) {
       hspot.style.visibility = 'hidden';
     }
 
@@ -88,6 +92,11 @@ function changeModel(num){
 
     } else if (num == 3) {
       modelviewer.src = "Models/3F-coloredNhan.gltf"
+
+      for (const hspot of F3) {
+        hspot.style.visibility = 'visible';
+      }
+      
     } else if (num == 4) {
       modelviewer.src= "Models/4F-coloredNhan.gltf"
     } else if (num == 5) {

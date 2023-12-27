@@ -161,6 +161,12 @@ model-viewer{
     background: white;
 }
 
+.F3{
+    visibility: hidden;
+    padding: 5px;
+    background: white;
+}
+
 .search-box{
     background: #fff;
     border-radius: 5px;
