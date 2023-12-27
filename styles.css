@@ -141,9 +141,8 @@ model-viewer{
 
 .search-box{
     background: #fff;
-    border-radius: 5px;
-    margin-right: 20px;
-    width: 600px;
+    width: 50vw;
+    outline: lightgray 1px solid;
 }
 
 .result-box{
@@ -153,6 +152,7 @@ model-viewer{
     width: inherit;
     background: #fff;
     border-radius: 0px 0px 5px 5px;
+    outline: lightgray 1px solid;
 }
 
 .result-box::-webkit-scrollbar{
@@ -160,8 +160,8 @@ model-viewer{
 }
 
 .result-box ul{
-    border-top: 1px solid #999;
     padding: 15px 10px;
+    margin-bottom: 0!important;
 }
 
 .result-box ul li{
@@ -224,7 +224,6 @@ button .fa-solid{
 .row{
     display: flex;
     align-items: center;
-    padding: 10px 20px;
 }
 
 input{
