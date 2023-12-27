@@ -159,10 +159,8 @@ input[type="text"]:focus-visible{
 }
 
 .photo{
-    flex-grow: 1;
     place-items: center;
     display: grid;
-    width: 20%;
 }
 
 .photo img{
@@ -218,4 +216,22 @@ model-viewer.location{
 section.gallery img{
     width: 100%;
     height: auto;
+}
+
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(25vh, 1fr));
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 1rem;
+}
+
+@media only screen and (max-width: 768px){
+    #gallery-container{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(25vh, 1fr));
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 1rem;
+    }
 }
