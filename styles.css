@@ -147,8 +147,10 @@ model-viewer{
 
 .search-box{
     background: #fff;
-    width: 50vw;
+    width: 45vw;
     outline: lightgray 1px solid;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .result-box{
@@ -192,7 +194,7 @@ button.Hotspot div{
 }
 
 button.filter{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     background-color: #000054;
     border-radius: 0 0 6px 6px;
     text-align: center;
@@ -257,4 +259,65 @@ input{
 
 .filter.active{
     background-color: #FAC800;
+}
+
+/* Footer CSS */
+.footer-container {
+    background-color: #000030;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+#academics { grid-area: 1 / 1 / 4 / 2; }
+#technology { grid-area: 1 / 2 / 4 / 3; }
+#services { grid-area: 1 / 3 / 4 / 4; }
+#recreational { grid-area: 1 / 4 / 4 / 5; }
+#social { grid-area: 4 / 1 / 5 / 6; }
+#copyright { grid-area: 5 / 1 / 6 / 6; }
+
+.filterlink{
+    color: white;
+}
+
+.filterlink span{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.filterlink ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.filterlink li{
+    padding-top: 1rem;
+}
+
+#social {
+    border-top: lightgray 1px solid;
+    margin-top: 2vh;
+    padding-top: 2vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#social button {
+    cursor: initial;
+}
+
+#social button i:hover{
+    color: lightgray;
+    transition-duration: 0.2s;
+}
+
+#social button i{
+    color: white;
+    font-size: 2em;
+    transition-duration: 0.2s;
 }
