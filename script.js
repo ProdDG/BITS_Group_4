@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Wait for the DOM to be fully loaded before adding the event listener
 
-  var button = document.querySelector(".btn-primary"); // Change this selector based on your actual button class
+  var button = document.getElementById("discover"); // Change this selector based on your actual button class
 
   if (button) {
     button.addEventListener("click", function () {
@@ -23,29 +23,29 @@ function scrollToSection() {
   }
 }
 
-var scrollButton = document.getElementById("scrollButton");
-var modelElement = document.getElementById("model");
+// var scrollButton = document.getElementById("scrollButton");
+// var modelElement = document.getElementById("model");
 
-function toggleScrollButton() {
-var modelRect = modelElement.getBoundingClientRect();
+// function toggleScrollButton() {
+// var modelRect = modelElement.getBoundingClientRect();
 
-// Check if the model element is NOT fully in the viewport
-if (
-    modelRect.top < 0 ||
-    modelRect.bottom > (window.innerHeight || document.documentElement.clientHeight)
-) {
-    scrollButton.style.display = "none"; // Hide the button
-} else {
-    scrollButton.style.display = "block"; // Show the button
-}
-}
+// // Check if the model element is NOT fully in the viewport
+// if (
+//     modelRect.top < 0 ||
+//     modelRect.bottom > (window.innerHeight || document.documentElement.clientHeight)
+// ) {
+//     scrollButton.style.display = "none"; // Hide the button
+// } else {
+//     scrollButton.style.display = "block"; // Show the button
+// }
+// }
 
-function handleScroll() {
-    toggleScrollButton();
-}
+// function handleScroll() {
+//     toggleScrollButton();
+// }
 
-window.addEventListener("scroll", handleScroll);
-window.addEventListener("resize", toggleScrollButton);
+// window.addEventListener("scroll", handleScroll);
+// window.addEventListener("resize", toggleScrollButton);
 
 // Initial check in case the element is already in the viewport on page load
 toggleScrollButton();

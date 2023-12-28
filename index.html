@@ -71,28 +71,15 @@
             universities in Australia
           </h4>
         </div>
-        <a href="room_detail.html" class="btn">
           <button
             type="button"
             class="rounded-2 p-2 bg-transparent text-light fs-4 px-3 underlineAnimation"
-            id="discover"
+            id="discover" onclick=""
           >
             <i class="fa-solid fa-map-location-dot text-light"></i>
             <span>Room Details</span>
           </button>
-        </a>
       </section>
-      <div id="scrollButton">
-        <button
-          class="half-circle-button"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasWithBothOptions"
-          aria-controls="offcanvasWithBothOptions"
-        >
-          <!-- Enable both scrolling & backdrop -->
-        </button>
-      </div>
       <div
         class="offcanvas offcanvas-end"
         data-bs-scroll="true"
@@ -102,29 +89,23 @@
       >
         <div class="offcanvas-header">
           <div style="text-align: center; width: 100%">
-            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-              Changing Floors
-            </h5>
+            <h2 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+              Select Level
+            </h2>
           </div>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
         </div>
         <div class="offcanvas-body">
           <div class="floor-buttons-container">
-            <button class="floor-button" onclick="changeModel(1)">1</button>
-            <button class="floor-button" onclick="changeModel(2)">2</button>
-            <button class="floor-button" onclick="changeModel(3)">3</button>
-            <button class="floor-button" onclick="changeModel(4)">4</button>
-            <button class="floor-button" onclick="changeModel(5)">5</button>
-            <button class="floor-button" onclick="changeModel(3)">6</button>
-            <button class="floor-button" onclick="changeModel(3)">7</button>
-            <button class="floor-button" onclick="changeModel(3)">8</button>
-            <button class="floor-button" onclick="changeModel(3)">9</button>
-            <button class="floor-button" onclick="changeModel(3)">10</button>
+            <button class="floor-button" onclick="changeModel(1)">1st Floor</button>
+            <button class="floor-button" onclick="changeModel(2)">2nd Floor</button>
+            <button class="floor-button" onclick="changeModel(3)">3rd Floor</button>
+            <button class="floor-button" onclick="changeModel(4)">4th Floor</button>
+            <button class="floor-button" onclick="changeModel(5)">5th Floor</button>
+            <button class="floor-button" onclick="changeModel(3)">6th Floor</button>
+            <button class="floor-button" onclick="changeModel(3)">7th Floor</button>
+            <button class="floor-button" onclick="changeModel(3)">8th Floor</button>
+            <button class="floor-button" onclick="changeModel(3)">9th Floor</button>
+            <button class="floor-button" onclick="changeModel(3)">10th Floor</button>
           </div>
         </div>
       </div>
@@ -154,6 +135,8 @@
         <div class="zoom">
           <button type="button" id="zoom-in"><i class="fa-solid fa-magnifying-glass-plus px-2"></i><span>Enable Zoom</span></button>
           <button type="button" id="zoom-out"><i class="fa-solid fa-magnifying-glass-minus px-2"></i><span>Disable Zoom</span></button>
+          <button class="half-circle-button px-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Change Level</button>
+          <div class="fs-6 text-dark fst-italic text-center">While zoom is enabled, scrolling is locked</div>
         </div>
           <!-- Floor 1 -->
           <button

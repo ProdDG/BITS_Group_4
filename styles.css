@@ -15,13 +15,13 @@ body {
 }
 
 #modeldisplay{
-    height: 90vh!important;
+    height: 100vh!important;
     width: inherit; 
     background-color: white;
 }
 
 model-viewer{
-    height: 90vh;
+    height: 100vh;
     width: inherit;
     background-color: white;
 };
@@ -43,42 +43,28 @@ model-viewer{
     }
 }
 
-#scrollButton {
-    display: none;
-    position: fixed;
-    top: 50vh; /* Adjusted to 50vh for vertical center */
-    right: 0;
-    transform: translateY(-50%);
-    /* padding: 10px; */
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.half-circle-button {
-    width: 20px; /* Adjust the width as needed */
-    height: 40px; /* Adjust the height as needed */
-    border-top-left-radius: 20px; /* Half of the height to create a half-circle effect */
-    border-bottom-left-radius: 20px; /* Half of the height to create a half-circle effect */
-    background-color: #007bff; /* Set your desired background color */
-    border: none;
-    position: sticky;
-    right: 0;
-}
-
 .floor-buttons-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    grid-row-gap: 1vh;
 }
 
 .floor-button {
-    width: 50px; /* Adjust the width as needed */
-    height: 50px; /* Adjust the height as needed */
-    margin-bottom: 30px; /* Adjust the spacing between buttons */
-    background-color: #007bff; /* Set your desired background color */
+    width: 100%;
+    height: 100%;
+    background-color: #000054;
+    margin-bottom: 30px;
     border: none;
-    color: #fff; /* Set your desired text color */
+    color: #fff;
     cursor: pointer;
+    font-size: 1.5em;
+    transition-duration: 0.2s;
+}
+
+.floor-button:hover {
+    background-color: #0078FF;
+    transition-duration: 0.2s;
 }
 
 .offcanvas-title {
@@ -328,6 +314,7 @@ input{
     font-size: 1.3rem;
     border: gray 1px solid;
     transition-duration: 0.5s;
+    background: #fff;
 }
 
 .zoom button:hover{
