@@ -225,10 +225,6 @@ button.filter:active {
     box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
 
-button .fa-solid{
-    color: red;
-}
-
 .row{
     display: flex;
     align-items: center;
@@ -320,4 +316,22 @@ input{
     color: white;
     font-size: 2em;
     transition-duration: 0.2s;
+}
+
+.zoom{
+    position: absolute;
+    bottom: 1vh;
+    right: 3vh;
+}
+
+.zoom button{
+    font-size: 1.3rem;
+    border: gray 1px solid;
+    transition-duration: 0.5s;
+}
+
+.zoom button:hover{
+    color: white;
+    background: #000;
+    transition-duration: 0.5s;
 }

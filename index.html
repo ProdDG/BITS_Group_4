@@ -135,13 +135,12 @@
           alt="Floor 1 Model"
           exposure="0.8"
           environment-image="legacy"
-          camera-orbit="-136.1deg 58.47deg 138.8m"
+          camera-orbit="-136.1deg 58.47deg 128.4m"
           field-of-view="30deg"
           max-camera-orbit="auto 79deg auto"
           interaction-prompt="none"
           camera-controls
           disable-zoom
-          disable-pan
         >
         <!-- Filters -->
         <div class="container-fluid w-100 p-0" id="filter-container">
@@ -150,6 +149,11 @@
           <button type="button" class="btn-outline-dark px-5 py-4 fs-4 filter">Student Services</button>
           <button type="button" class="btn-outline-dark px-5 py-4 fs-4 filter">Recreational Space</button>
           <button type="button" class="btn-outline-dark px-5 py-4 fs-4 filter" id="clear-filter">Clear Filter</button>
+        </div>
+        <!-- Zoom Button -->
+        <div class="zoom">
+          <button type="button" id="zoom-in"><i class="fa-solid fa-magnifying-glass-plus px-2"></i><span>Enable Zoom</span></button>
+          <button type="button" id="zoom-out"><i class="fa-solid fa-magnifying-glass-minus px-2"></i><span>Disable Zoom</span></button>
         </div>
           <!-- Floor 1 -->
           <button
@@ -382,6 +386,7 @@
       ></script>
       <script src="script.js"></script>
       <script src="searchbar.js"></script>
+      <script src="modelzoom.js"></script>
     </main>
     <footer>
       <div class="container-fluid w-100 footer-container">
