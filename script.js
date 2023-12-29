@@ -65,6 +65,8 @@ function changeModel(num){
     var F1 = document.getElementsByClassName("F1");
     var F2 = document.getElementsByClassName("F2");
     var F3 = document.getElementsByClassName("F3");
+    var F4 = document.getElementsByClassName("F4");
+    var F5 = document.getElementsByClassName("F5");
 
     for (const hspot of F1) {
       hspot.style.visibility = 'hidden';
@@ -73,6 +75,12 @@ function changeModel(num){
       hspot.style.visibility = 'hidden';
     }
     for (const hspot of F3) {
+      hspot.style.visibility = 'hidden';
+    }
+    for (const hspot of F4) {
+      hspot.style.visibility = 'hidden';
+    }
+    for (const hspot of F5) {
       hspot.style.visibility = 'hidden';
     }
 
@@ -99,8 +107,18 @@ function changeModel(num){
       
     } else if (num == 4) {
       modelviewer.src= "Models/4F-coloredNhan.gltf"
+
+      for (const hspot of F4) {
+        hspot.style.visibility = 'visible';
+      }
+
     } else if (num == 5) {
       modelviewer.src= "Models/5F-coloredNhan.gltf"
+
+      for (const hspot of F5) {
+        hspot.style.visibility = 'visible';
+      }
+
     }
 }
 
