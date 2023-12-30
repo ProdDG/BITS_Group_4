@@ -67,6 +67,12 @@ function changeModel(num){
     var F3 = document.getElementsByClassName("F3");
     var F4 = document.getElementsByClassName("F4");
     var F5 = document.getElementsByClassName("F5");
+    var F6 = document.getElementsByClassName("F6");
+    var F7 = document.getElementsByClassName("F7");
+    var F8 = document.getElementsByClassName("F8");
+    var F9 = document.getElementsByClassName("F9");
+    var F10 = document.getElementsByClassName("F10");
+    var F14 = document.getElementsByClassName("F14");
 
     for (const hspot of F1) {
       hspot.style.visibility = 'hidden';
@@ -83,6 +89,25 @@ function changeModel(num){
     for (const hspot of F5) {
       hspot.style.visibility = 'hidden';
     }
+    for (const hspot of F6) {
+      hspot.style.visibility = 'hidden';
+    }
+    for (const hspot of F7) {
+      hspot.style.visibility = 'hidden';
+    }
+    for (const hspot of F8) {
+      hspot.style.visibility = 'hidden';
+    }
+    for (const hspot of F9) {
+      hspot.style.visibility = 'hidden';
+    }
+    for (const hspot of F10) {
+      hspot.style.visibility = 'hidden';
+    }
+    for (const hspot of F14) {
+      hspot.style.visibility = 'hidden';
+    }
+
 
     if (num == 1) {
       modelviewer.src = "Models/1F-colored.gltf"
@@ -119,6 +144,48 @@ function changeModel(num){
         hspot.style.visibility = 'visible';
       }
 
+    } else if (num == 6) {
+      modelviewer.src= "Models/6F-coloredNhan.gltf"
+
+      for (const hspot of F6) {
+        hspot.style.visibility = 'visible';
+      }
+      
+    } else if (num == 7) {
+      modelviewer.src= "Models/7F-coloredNhan.gltf"
+
+      for (const hspot of F7) {
+        hspot.style.visibility = 'visible';
+      }
+
+    } else if (num == 8) {
+      modelviewer.src= "Models/8F-coloredNhan.gltf"
+
+      for (const hspot of F8) {
+        hspot.style.visibility = 'visible';
+      }
+
+    } else if (num == 9) {
+      modelviewer.src= "Models/9F-coloredNhan.gltf"
+
+      for (const hspot of F9) {
+        hspot.style.visibility = 'visible';
+      }
+
+    } else if (num == 10) {
+      modelviewer.src= "Models/10F-coloredNhan.gltf"
+
+      for (const hspot of F10) {
+        hspot.style.visibility = 'visible';
+      }
+    } 
+
+    else if (num == 14) {
+      modelviewer.src= "Models/14F-coloredNhan.gltf"
+
+      for (const hspot of F14) {
+        hspot.style.visibility = 'visible';
+      }
     }
 }
 
