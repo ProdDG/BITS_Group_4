@@ -48,7 +48,7 @@ function scrollToSection() {
 // window.addEventListener("resize", toggleScrollButton);
 
 // Initial check in case the element is already in the viewport on page load
-toggleScrollButton();
+// toggleScrollButton();
 
 // window.addEventListener('scroll', followScroll);
 

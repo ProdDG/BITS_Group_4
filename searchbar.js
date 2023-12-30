@@ -20,6 +20,7 @@ let keywords = [
     'Student Connect',
     'Wellbeing',
     'Office',
+    'International Office'
   ];
   
   const resultsBox = document.querySelector(".result-box");
@@ -73,6 +74,7 @@ let keywords = [
     'Student Connect': 'student_connect.html',
     'Wellbeing': 'wellbeing_details.html',
     'Office': 'office_detail.html',
+    'International Office': 'sos_office_detail.html',
   };
   
   resultsBox.addEventListener('click', function(e){

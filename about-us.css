@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    row-gap: 5rem;
 }
 
 #mem1 { grid-area: 1 / 1 / 2 / 2; }
@@ -21,6 +22,11 @@
 
 .avatar {
     padding-bottom: 2rem;
+}
+
+.avatar img{
+    width: 20rem;
+    height: auto;
 }
 
 .member {
