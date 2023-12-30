@@ -19,8 +19,7 @@ let keywords = [
     'AV Theatre',
     'Student Connect',
     'Wellbeing',
-    'Office',
-    'International Office'
+    'International Office',
   ];
   
   const resultsBox = document.querySelector(".result-box");
@@ -73,7 +72,6 @@ let keywords = [
     'AV Theatre': 'av_theatre_detail.html',
     'Student Connect': 'student_connect.html',
     'Wellbeing': 'wellbeing_details.html',
-    'Office': 'office_detail.html',
     'International Office': 'sos_office_detail.html',
   };
   
