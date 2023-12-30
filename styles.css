@@ -155,6 +155,42 @@ model-viewer button.show {
     background: white;
 }
 
+.F6{
+    visibility: hidden;
+    padding: 5px;
+    background: white;
+}
+
+.F7{
+    visibility: hidden;
+    padding: 5px;
+    background: white;
+}
+
+.F8{
+    visibility: hidden;
+    padding: 5px;
+    background: white;
+}
+
+.F9{
+    visibility: hidden;
+    padding: 5px;
+    background: white;
+}
+
+.F10{
+    visibility: hidden;
+    padding: 5px;
+    background: white;
+}
+
+.F14{
+    visibility: hidden;
+    padding: 5px;
+    background: white;
+}
+
 .search-box{
     background: #fff;
     width: 45vw;
