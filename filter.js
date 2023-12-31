@@ -1,4 +1,3 @@
-
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("filterItem");
