@@ -24,11 +24,6 @@ section#modelarea {
     height: 90vh!important;
 }
 
-#modeldisplay{
-    width: inherit; 
-    background-color: white;
-}
-
 model-viewer{
     height: 90vh;
     width: inherit;
