@@ -76,6 +76,7 @@ function changeModel(num){
 
     for (const hspot of F1) {
       hspot.style.visibility = 'hidden';
+      hspot.style.pointerEvents = 'none';
     }
     for (const hspot of F2) {
       hspot.style.visibility = 'hidden';
@@ -114,6 +115,7 @@ function changeModel(num){
 
       for (const hspot of F1) {
         hspot.style.visibility = 'visible';
+        hspot.style.pointerEvents = 'auto';
       }
 
     } else if (num == 2) {

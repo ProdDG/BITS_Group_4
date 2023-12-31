@@ -117,7 +117,7 @@ model-viewer{
 } */
 
 model-viewer button.show {
-    visibility: hidden!important;
+    visibility: hidden;
 }
 
 .F1{

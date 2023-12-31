@@ -1,7 +1,6 @@
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("filterItem");
-  x.style.pointerEvents = 'none';
   if (c == "all") c = "";
   for (i = 0; i < x.length; i++) {
     RemoveClass(x[i], "show");
