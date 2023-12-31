@@ -32,7 +32,6 @@ let keywords = [
       result = keywords.filter((keyword)=>{
         return keyword.toLowerCase().includes(input.toLowerCase());
       });
-      console.log(result)
     }
     display(result);
   
