@@ -112,12 +112,23 @@ model-viewer{
     font-weight: 300;
 }
 
-/* .Hotspot{
-    visibility: hidden;
-} */
-
-model-viewer button.show {
+.Hotspot{
     visibility: hidden!important;
+}
+
+.Hotspot .filterItem{
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.Hotspot .filterItem a{
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+.Hotspot .filterItem a:hover{
+    color: #940000;
+    transition-duration: 0.2s;
 }
 
 .F1{
