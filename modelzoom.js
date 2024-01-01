@@ -5,7 +5,7 @@ function zoomIn() {
   var fieldOfView = parseFloat(modelViewer.getAttribute('field-of-view'));
 
   // Decrease the fieldOfView to zoom in
-  var newFieldOfView = Math.max(fieldOfView - 1, 12);  // Prevent the fieldOfView from going below 0
+  var newFieldOfView = Math.max(fieldOfView - 6, 12);  // Prevent the fieldOfView from going below 0
 
   // Set the new fieldOfView value
   modelViewer.setAttribute('field-of-view', `${newFieldOfView}deg`);
@@ -18,7 +18,7 @@ function zoomOut() {
     var fieldOfView = parseFloat(modelViewer.getAttribute('field-of-view'));
   
     // Increase the fieldOfView to zoom out
-    var newFieldOfView = Math.min(fieldOfView + 2, 30);  // Prevent the fieldOfView from going above 180
+    var newFieldOfView = Math.min(fieldOfView + 6, 30);  // Prevent the fieldOfView from going above 180
   
     // Set the new fieldOfView value
     modelViewer.setAttribute('field-of-view', `${newFieldOfView}deg`);
