@@ -219,6 +219,10 @@ model-viewer{
     display: none;
 }
 
+.offcanvas-body::-webkit-scrollbar{
+    display: none;
+}
+
 .result-box ul{
     padding: 15px 10px;
     margin-bottom: 0!important;

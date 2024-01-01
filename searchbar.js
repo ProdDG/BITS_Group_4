@@ -63,7 +63,7 @@ let keywords = [
     'Security': 'security.html',
     'Design Studio': 'design-studio.html',
     'Collaboration Study Space': 'student_space_detail.html',
-    'Teacher & Research': 'teacher-research.html',
+    'Teacher & Research': 'teacher_n_research.html',
     'T&H Management Classroom': 'th-management-classroom.html',
     'SAS': 'sas_detail.html',
     'Financial Trading Lab': 'financial_detail.html',
