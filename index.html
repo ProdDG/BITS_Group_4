@@ -16,7 +16,6 @@
     />
     <link href="styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="room_detail.css" />
-    <link rel="stylesheet" href="animation.css">
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
     <script
       src="https://kit.fontawesome.com/428f8b3ba7.js"
@@ -109,6 +108,7 @@
             <button class="floor-button" onclick="changeModel(8)">8th Floor</button>
             <button class="floor-button" onclick="changeModel(9)">9th Floor</button>
             <button class="floor-button" onclick="changeModel(10)">10th Floor</button>
+            <button class="floor-button" onclick="changeModel(14)">14th Floor</button>
           </div>
         </div>
       </div>
@@ -128,331 +128,854 @@
         >
         <!-- Filters -->
         <div class="container-fluid w-100 p-0" id="filter-container">
-          <button type="button" class="btn-outline-dark px-5 py-4 fs-4 filter">Academic Facilities</button>
-          <button type="button" class="btn-outline-dark px-5 py-4 fs-4 filter">Technology Facilities</button>
-          <button type="button" class="btn-outline-dark px-5 py-4 fs-4 filter">Student Services</button>
-          <button type="button" class="btn-outline-dark px-5 py-4 fs-4 filter">Recreational Space</button>
-          <button type="button" class="btn-outline-dark px-5 py-4 fs-4 filter" id="clear-filter">Clear Filter</button>
+          <button type="button" class="btn-outline-dark px-5 py-4 fs-4 filter" onclick="filterSelection('academics')">Academic Facilities</button>
+          <button type="button" class="btn-outline-dark px-5 py-4 fs-4 filter" onclick="filterSelection('tech')">Technology Facilities</button>
+          <button type="button" class="btn-outline-dark px-5 py-4 fs-4 filter" onclick="filterSelection('services')">Student Services</button>
+          <button type="button" class="btn-outline-dark px-5 py-4 fs-4 filter" onclick="filterSelection('recreational')">Recreational Space</button>
+          <button type="button" class="btn-outline-dark px-5 py-4 fs-4 filter" id="clear-filter" onclick="filterSelection('all')">Show All</button>
         </div>
         <!-- Zoom Button -->
         <div class="zoom">
-          <button type="button" id="zoom-in"><i class="fa-solid fa-magnifying-glass-plus px-2"></i><span>Enable Zoom</span></button>
-          <button type="button" id="zoom-out"><i class="fa-solid fa-magnifying-glass-minus px-2"></i><span>Disable Zoom</span></button>
+          <button type="button" id="zoom-in"><i class="fa-solid fa-magnifying-glass-plus px-2"></i><span>Zoom In</span></button>
+          <button type="button" id="zoom-out"><i class="fa-solid fa-magnifying-glass-minus px-2"></i><span>Zoom Out</span></button>
           <button class="half-circle-button px-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Change Level</button>
           <div class="fs-6 text-dark fst-italic text-center">While zoom is enabled, scrolling is locked</div>
         </div>
           <!-- Floor 1 -->
           <button
-            class="Hotspot filterItem"
-            id="reception"
-            slot="hotspot-reception"
+            class="Hotspot"
+            id="1-reception"
+            slot="hotspot-1-reception"
             data-position="62m 1.5m -3.5m"
-            data-normal="2.0780711945634374e-23m 1m -6.123235510715617e-17m"
-          >
-            <div class="F1">Reception</div>
+            data-normal="2.0780711945634374e-23m 1m -6.123235510715617e-17m">
+              <div class="filterItem F1 services">
+                <a href="reception_detail.html">Reception</a>
+              </div>
           </button>
-  
+            
           <button
-            class="Hotspot filterItem"
+            class="Hotspot"
             id="security"
             slot="hotspot-security"
             data-position="37.5m 1.5m -8.5m"
-            data-normal="0m 1m -6.123233766215893e-17m"
-          >
-            <div class="F1">Security</div>
+            data-normal="0m 1m -6.123233766215893e-17m">
+            <div class="F1 filterItem services">
+                <a href="reception_detail.html">Security</a>
+              </div>
           </button>
   
-          <button class="Hotspot filterItem"
+          <button class="Hotspot"
             id="avtheatre"
             slot="hotspot-avtheatre"
             data-position="29m 1.5m -7m"
             data-normal="0m 1m -6.123234330344732e-17m">
-            <div class="F1">AV Theatre</div>
+            <div class="F1 filterItem recreational">
+                <a href="reception_detail.html">AV Theatre</a>
+              </div>
           </button>
   
-          <button class="Hotspot filterItem"
+          <button class="Hotspot"
             id="studentconnect"
             slot="hotspot-studentconnect"
             data-position="29m 1.5m -19m"
-            data-normal="0m 1m -6.123234330344732e-17m"
-            >
-          <div class="F1">Student Connect</div>
+            data-normal="0m 1m -6.123234330344732e-17m">
+          <div class="F1 filterItem services">
+                <a href="reception_detail.html">Student Connect</a>
+              </div>
         </button>
   
         <button
-          class="Hotspot filterItem"
+          class="Hotspot"
           id="internationaloffice"
           slot="hotspot-internationaloffice"
           data-position="35m 1.5m -4m"
-          data-normal="0m 1m -6.123233766215893e-17m"
-        >
-          <div class="F1">International Office</div>
+          data-normal="0m 1m -6.123233766215893e-17m">
+          <div class="filterItem F1 services">
+                <a href="reception_detail.html">International Office</a>
+              </div>
         </button>
   
         <button
-          class="Hotspot filterItem"
-          id="sosoffice"
-          slot="hotspot-sosoffice"
+          class="Hotspot"
+          id="1-office"
+          slot="hotspot-1-office"
           data-position="35m 1.5m -21m"
           data-normal="0m 1m -6.123233766215893e-17m"
         >
-          <div class="F1">SOS Office</div>
+          <div class="F1 filterItem services">
+                <a href="reception_detail.html">Office</a>
+              </div>
         </button>
   
         <button
-          class="Hotspot filterItem"
+          class="Hotspot"
           id="wellbeing"
           slot="hotspot-wellbeing"
           data-position="22m 1.5m -10m"
-          data-normal="8.830206155528848e-17m 1m -6.20141266501099e-17m"
-        >
-          <div class="F1">Wellbeing</div>
+          data-normal="8.830206155528848e-17m 1m -6.20141266501099e-17m">
+          <div class="F1 filterItem services">
+            <a href="reception_detail.html">Wellbeing</a>
+          </div>
         </button>
   
-        <button class="Hotspot filterItem"
+        <!-- <button class="Hotspot F1 filterItem"
             id="WC1"
             slot="hotspot-WC1"
             data-position="40.75m 1.5m -17m"
             data-normal="0m 1m 0m">
-          <div class="F1">WC</div>
-        </button>
+          WC
+        </button> -->
           <!-- Floor 2 -->
           <button
-            class="Hotspot filterItem"
+            class="Hotspot"
             id="library"
             slot="hotspot-library"
             data-position="25.5m 1.5m -10m"
             data-normal="-3.7021225344847627e-17m 1m 2.1642602185734502e-16m"
           >
-            <div class="F2">Library</div>
+            <div class="F2 filterItem academics">
+              <a href="reception_detail.html">Library</a>
+            </div>
           </button>
   
-          <button
-            class="Hotspot filterItem"
+          <!-- <button
+            class="Hotspot F2 filterItem"
             id="quietroom"
             slot="hotspot-quietroom"
             data-position="40m 1.5m -2.5m"
             data-normal="-3.7021225344847627e-17m 1m 2.1642602185734502e-16m"
           >
-            <div class="F2">Quiet Room</div>
-          </button>
+            Quiet Room
+          </button> -->
   
-          <button
-            class="Hotspot filterItem"
+          <!-- <button
+            class="Hotspot"
             id="quietroom2"
             slot="hotspot-quietroom2"
             data-position="40m 1.5m -17.5m"
             data-normal="-3.7021225344847627e-17m 1m 2.1642602185734502e-16m"
           >
-            <div class="F2">Quiet Room</div>
-          </button>
+            Quiet Room
+          </button> -->
   
-          <button
-            class="Hotspot filterItem"
+          <!-- <button
+            class="Hotspot"
             id="meetingroom"
             slot="hotspot-meetingroom"
             data-position="10m 1.5m -15m"
             data-normal="-3.7021225344847627e-17m 1m 2.1642602185734502e-16m"
           >
-            <div class="F2">Meeting Room</div>
-          </button>
+            Meeting Room
+          </button> -->
   
           <button
-            class="Hotspot filterItem"
+            class="Hotspot"
             id="studentacademicsuccess"
             slot="hotspot-studentacademicsuccess"
             data-position="37.5m 1.5m -42.5m"
             data-normal="-3.7021225344847627e-17m 1m 2.1642602185734502e-16m"
           >
-            <div class="F2">Student Academic Success</div>
+            <div class="F2 filterItem services">
+              <a href="reception_detail.html">Student Academic Success</a>
+            </div>
           </button>
   
-          <button
-            class="Hotspot filterItem"
+          <!-- <button
+            class="Hotspot"
             id="workshoptrainingroom"
             slot="hotspot-workshoptrainingroom"
             data-position="36.675m 1.5m -29m"
             data-normal="-3.7021225344847627e-17m 1m 2.1642602185734502e-16m"
           >
-            <div class="F2">Workshop & Training Room</div>
-          </button>
+            Workshop & Training Room
+          </button> -->
   
           <button
-            class="Hotspot filterItem"
+            class="Hotspot"
             id="maclab"
             slot="hotspot-maclab"
             data-position="12.5m 1.5m -42.5m"
             data-normal="-3.7021225344847627e-17m 1m 2.1642602185734502e-16m"
           >
-            <div class="F2">Mac Lab</div>
+            <div class="F2 filterItem tech">
+              <a href="reception_detail.html">Mac Lab</a>
+            </div>
           </button>
-  
+
           <button
-            class="Hotspot filterItem"
+            class="Hotspot"
             id="labroom"
             slot="hotspot-labroom"
             data-position="13.325m 1.5m -29m"
             data-normal="-3.7021225344847627e-17m 1m 2.1642602185734502e-16m"
           >
-            <div class="F2">Lab Room</div>
+            <div class="F2 filterItem academics">
+              <a href="reception_detail.html">Lab Room</a>
+            </div>
           </button>
   
-          <button class="Hotspot filterItem"
+          <!-- <button class="Hotspot"
             id="WC2"
             slot="hotspot-WC2"
             data-position="22m 1.5m -22m"
             data-normal="0m 1m 0m">
-          <div class="F2">WC</div>
+          WC -->
           <!-- Floor 3 -->
   
-          <button class="Hotspot filterItem"
+          <button class="Hotspot"
             id="class3-001"
             slot="hotspot-class3-001"
             data-position="24m 3.5m -19m"
             data-normal="0m 1m 0m">
-          <div class="F3">Classroom 001</div>
-  
-          <button class="Hotspot filterItem"
+            <div class="F3 filterItem academics">
+              <a href="room_detail.html">Classroom</a>
+            </div>
+          </button>
+
+          <button class="Hotspot"
             id="class3-002"
             slot="hotspot-class3-002"
             data-position="23m 3.5m -7m"
             data-normal="0m 1m 0m">
-          <div class="F3">Classroom 002</div>
-  
-  
-          <button class="Hotspot filterItem"
+            <div class="F3 filterItem academics">
+              <a href="room_detail.html">Classroom</a>
+            </div>
+          </button>
+          <!-- <button class="Hotspot"
             id="office"
             slot="hotspot-office"
             data-position="15m 3.5m -5m"
             data-normal="0m 1m 0m">
-          <div class="F3">Office</div>
-  
-          <button class="Hotspot filterItem"
+            <div class="F3">Office</div>
+          </button> -->
+          <button class="Hotspot tech"
             id="lab3-005"
             slot="hotspot-lab3-005"
             data-position="5m 3.5m -5m"
             data-normal="0m 1m 0m">
-          <div class="F3">Lab 005</div>
-  
-          <button class="Hotspot filterItem"
+            <div class="F3 filterItem tech">
+              <a href="#">Duo OS Lab</a>
+            </div>
+          </button>
+          <button class="Hotspot"
             id="class006"
             slot="hotspot-class3-006"
             data-position="4m 3.5m -18m"
             data-normal="0m 1m 0m">
-          <div class="F3">Class 006</div>
-  
-          <button class="Hotspot filterItem"
+            <div class="F3 filterItem academics">
+              <a href="room_detail.html">Classroom</a>
+            </div>
+          </button>
+          <!-- <button class="Hotspot"
             id="WC3"
             slot="hotspot-WC3"
             data-position="18m 3.5m -24m"
             data-normal="0m 1m 0m">
-          <div class="F3">WC</div>
+            <div class="F3">WC</div> -->
           <!-- Floor 4 -->
-          <button class="Hotspot filterItem"
+          <button class="Hotspot"
             id="class4-001"
             slot="hotspot-class4-001"
             data-position="18.5m 3.5m -6.5m"
             data-normal="0m 1m 0m">
-          <div class="F4">Class 001</div>
-
-          <button class="Hotspot filterItem"
+          <div class="F4 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
+          <button class="Hotspot"
             id="class4-002"
             slot="hotspot-class4-002"
             data-position="6.5m 3.5m -6.5m"
             data-normal="0m 1m 0m">
-          <div class="F4">Class 002</div>
-
-          <button class="Hotspot filterItem"
+          <div class="F4 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
+          <button class="Hotspot"
             id="class4-003"
             slot="hotspot-class4-003"
             data-position="6.5m 3.5m -16.25m"
             data-normal="0m 1m 0m">
-          <div class="F4">Class 003</div>
-
-          <button class="Hotspot filterItem"
+          <div class="F4 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
+          <button class="Hotspot"
             id="class4-004"
             slot="hotspot-class4-004"
             data-position="6.5m 3.5m -26m"
             data-normal="0m 1m 0m">
-          <div class="F4">Class 004</div>
-
-          <button class="Hotspot filterItem"
+          <div class="F4 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
+          <button class="Hotspot tech"
             id="lab4-005"
             slot="hotspot-lab4-005"
             data-position="16.5m 3.5m -27.5m"
             data-normal="0m 1m 0m">
-          <div class="F4">Lab 005</div>
-
-          <button class="Hotspot filterItem"
-            id="WC4"
-            slot="hotspot-WC4"
-            data-position="21.5m 3.5m -15.25m"
-            data-normal="0m 1m 0m">
-          <div class="F4">WC</div>
+          <div class="F4 filterItem tech">
+            <a href="#">Windows Lab</a>
+          </div>
+          </button>
           <!-- Floor 5 -->
     
-          <button class="Hotspot filterItem"
+          <button class="Hotspot"
             id="class5-003"
             slot="hotspot-class5-003"
             data-position="47.25m 1.5m 10m"
             data-normal="0m 1m 0m">
-          <div class="F5">Class 003</div>
+          <div class="F5 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
 
-          <button class="Hotspot filterItem"
+          <button class="Hotspot"
             id="class5-004"
             slot="hotspot-class5-004"
             data-position="47.25m 1.5m 19m"
             data-normal="0m 1m 0m">
-          <div class="F5">Class 004</div>
+          <div class="F5 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
 
-          <button class="Hotspot filterItem"
+          <button class="Hotspot"
             id="class5-005"
             slot="hotspot-class5-005"
             data-position="47.25m 1.5m 28m"
             data-normal="0m 1m 0m">
-          <div class="F5">Class 005</div>
+          <div class="F5 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
 
-          <button class="Hotspot filterItem"
+          <button class="Hotspot"
             id="sport-&-recreation"
             slot="hotspot-sport-&-recreation"
             data-position="27.5m 1.5m 6m"
             data-normal="0m 1m 0m">
-          <div class="F5">Sport & Recreation</div>
+          <div class="F5 filterItem recreational">
+            <a href="sport_center_detail.html">Sport Center</a>
+          </div>
+          </button>
 
-          <button class="Hotspot filterItem"
+          <!-- <button class="Hotspot"
             id="itservice"
             slot="hotspot-itservice"
             data-position="26m 1.5m 28m"
             data-normal="0m 1m 0m">
-          <div class="F5">IT Service</div>
+          <div class="F5">IT Service</div> -->
 
-          <button class="Hotspot filterItem"
+          <!-- <button class="Hotspot"
             id="propservice"
             slot="hotspot-propservice"
             data-position="18.5 1.5m 32.5m"
             data-normal="0m 1m 0m">
           <div class="F5">Property Service</div>
+          </button> -->
 
-          <button class="Hotspot filterItem"
+          <button class="Hotspot"
             id="studentbreakoutspace"
             slot="hotspot-studentbreakoutspace"
             data-position="7.5 1.5m 15m"
             data-normal="0m 1m 0m">
-          <div class="F5">Student Breakout Space</div>
+          <div class="F5 filterItem recreational">
+            <a href="student_space_detail.html">Student Breakout Space</a>
+          </div>
+          </button>
 
-          <button class="Hotspot filterItem"
+          <!-- <button class="Hotspot"
+            id="f-changingroom"
+            slot="hotspot-f-changingroom"
+            data-position="16.5m 1.5m 8m"
+            data-normal="0m 1m 0m">
+          <div class="F5">Female Changing Room</div> -->
+
+          <!-- <button class="Hotspot"
             id="WC5-1"
             slot="hotspot-WC5-1"
             data-position="19m 1.5m 23m"
             data-normal="0m 1m 0m">
-          <div class="F5">WC</div>
+          <div class="F5">WC</div> -->
 
-          <button class="Hotspot filterItem"
+          <!-- <button class="Hotspot"
             id="WC5-2"
             slot="hotspot-WC5-2"
             data-position="19m 1.5m 14m"
             data-normal="0m 1m 0m">
-          <div class="F5">WC</div>
+          <div class="F5">WC</div> -->
+          <!-- Floor 6 -->
+
+          <button class="Hotspot"
+            id="designstudio"
+            slot="hotspot-designstudio"
+            data-position="28.5m 1.5m 26m"
+            data-normal="0m 1m 0m">
+            <div class="F6 filterItem academics">
+              <a href="design_studio_detail.html">Design Studio</a>
+            </div>
+          </button>
+
+          <button class="Hotspot"
+            id="class6-003"
+            slot="hotspot-class6-003"
+            data-position="46.5m 1.5m 28.5m"
+            data-normal="0m 1m 0m">
+            <div class="F6 filterItem academics">
+              <a href="room_detail.html">Classroom</a>
+            </div>
+          </button>
+
+          <button class="Hotspot"
+            id="class6-004"
+            slot="hotspot-class6-004"
+            data-position="46.5m 1.5m 35.5m"
+            data-normal="0m 1m 0m">
+            <div class="F6 filterItem academics">
+              <a href="room_detail.html">Classroom</a>
+            </div>
+          </button>
+
+          <button class="Hotspot"
+            id="class6-005"
+            slot="hotspot-class6-005"
+            data-position="46.5m 1.5m 42.5m"
+            data-normal="0m 1m 0m">
+            <div class="F6 filterItem academics">
+              <a href="room_detail.html">Classroom</a>
+            </div>
+          </button>
+
+          <button class="Hotspot"
+            id="class6-006"
+            slot="hotspot-class6-006"
+            data-position="46.5m 1.5m 49m"
+            data-normal="0m 1m 0m">
+            <div class="F6 filterItem academics">
+              <a href="room_detail.html">Classroom</a>
+            </div>
+          </button>
+
+          <button class="Hotspot"
+            id="class6-007"
+            slot="hotspot-class6-007"
+            data-position="31.5m 1.5m 49m"
+            data-normal="0m 1m 0m">
+            <div class="F6 filterItem academics">
+              <a href="room_detail.html">Classroom</a>
+            </div>
+          </button>
+
+          <!-- <button class="Hotspot"
+            id="m-changingroom"
+            slot="hotspot-m-changingroom"
+            data-position="19m 1.5m 26.5m"
+            data-normal="0m 1m 0m">
+          <div class="F6">Male Changing Room</div> -->
+
+          <!-- <button class="Hotspot"
+            id="WC6-1"
+            slot="hotspot-WC6-1"
+            data-position="18m 1.5m 43.5m"
+            data-normal="0m 1m 0m">
+          <div class="F6">WC</div> -->
+
+          <!-- <button class="Hotspot"
+            id="WC6-2"
+            slot="hotspot-WC6-2"
+            data-position="18m 1.5m 34.5m"
+            data-normal="0m 1m 0m">
+          <div class="F6">WC</div> -->
+          <!-- Floor 7 -->
+          <!-- <button class="Hotspot"
+            id="PASS"
+            slot="hotspot-PASS"
+            data-position="19m 1.5m 24m"
+            data-normal="0m 1m 0m">
+          <div class="F7">PASS</div> -->
+
+          <button class="Hotspot"
+            id="class7-002"
+            slot="hotspot-lab7-002"
+            data-position="29m 1.5m 29m"
+            data-normal="0m 1m 0m">
+          <div class="F7 filterItem tech">
+            <a href="#">Windows Lab</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="class7-003"
+            slot="hotspot-class7-003"
+            data-position="46.5m 1.5m 28.5m"
+            data-normal="0m 1m 0m">
+          <div class="F7 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="class7-004"
+            slot="hotspot-class7-004"
+            data-position="46.5m 1.5m 35.5m"
+            data-normal="0m 1m 0m">
+          <div class="F7 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="class7-005"
+            slot="hotspot-class7-005"
+            data-position="46.5m 1.5m 42.5m"
+            data-normal="0m 1m 0m">
+          <div class="F7 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="class7-006"
+            slot="hotspot-class7-006"
+            data-position="46.5m 1.5m 49m"
+            data-normal="0m 1m 0m">
+          <div class="F7 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="class7-007"
+            slot="hotspot-class7-007"
+            data-position="30m 1.5m 49m"
+            data-normal="0m 1m 0m">
+          <div class="F7 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
+
+          <!-- <button class="Hotspot"
+            id="7-office"
+            slot="hotspot-7-office"
+            data-position="20m 1.5m 53m"
+            data-normal="0m 1m 0m">
+          <div class="F7">Office</div> -->
+
+          <!-- <button class="Hotspot"
+            id="WC7-1"
+            slot="hotspot-WC7-1"
+            data-position="18m 1.5m 43.5m"
+            data-normal="0m 1m 0m">
+          <div class="F7">WC</div> -->
+
+          <!-- <button class="Hotspot"
+            id="WC7-2"
+            slot="hotspot-WC7-2"
+            data-position="18m 1.5m 34.5m"
+            data-normal="0m 1m 0m">
+          <div class="F7">WC</div> -->
+          <!-- Floor 8 -->
+          <button class="Hotspot"
+            id="collaborativelearning"
+            slot="hotspot-collaborativelearning"
+            data-position="35m 1.5m -5.5m"
+            data-normal="0m 1m 0m">
+          <div class="F8 filterItem academics">
+            <a href="collaboration_study_space_detail.html">Collaborative Learning Area</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="8-maclab"
+            slot="hotspot-8-maclab"
+            data-position="26.5m 1.5m -5m"
+            data-normal="0m 1m 0m">
+          <div class="F8 filterItem tech">
+            <a href="#">Mac Lab</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="studentaccesslab"
+            slot="hotspot-studentaccesslab"
+            data-position="15m 1.5m -5m"
+            data-normal="0m 1m 0m">
+          <div class="F8 filterItem tech">
+            <a href="#">Windows Lab</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="studentbreakout"
+            slot="hotspot-studentbreakout"
+            data-position="3.5m 1.5m -8.75m"
+            data-normal="0m 1m 0m">
+          <div class="F8 filterItem recreational">
+            <a href="student_space_detail.html">Student Breakout Space</a>
+          </div>
+          </button>
+
+          <!-- <button class="Hotspot"
+            id="studentcouncil"
+            slot="hotspot-studentcouncil"
+            data-position="28m 1.5m -14m"
+            data-normal="0m 1m 0m">
+          <div class="F8">Student Council</div> -->
+
+          <!-- <button class="Hotspot"
+            id="studentengagement"
+            slot="hotspot-studentengagement"
+            data-position="18m 1.5m -14m"
+            data-normal="0m 1m 0m">
+          <div class="F8">Student Engagement</div> -->
+
+          <!-- <button class="Hotspot"
+            id="WC8-1"
+            slot="hotspot-WC8-1"
+            data-position="35m 1.5m -27.5m"
+            data-normal="0m 1m 0m">
+          <div class="F8">WC</div> -->
+
+          <!-- <button class="Hotspot"
+            id="WC8-2"
+            slot="hotspot-WC8-2"
+            data-position="35m 1.5m -19.5m"
+            data-normal="0m 1m 0m">
+          <div class="F8">WC</div> -->
+          <!-- Floor 9 -->          
+          <!-- <button class="Hotspot"
+            id="staffroom"
+            slot="hotspot-staffroom"
+            data-position="21.5m 1.5m 48m"
+            data-normal="0m 1m 0m">
+          <div class="F9">Staff Room</div> -->
+
+          <button class="Hotspot"
+            id="9-reception"
+            slot="hotspot-9-reception"
+            data-position="37.5m 1.5m 39m"
+            data-normal="0m 1m 0m">
+          <div class="F9 filterItem services">
+            <a href="reception_detail.html">Reception</a>
+          </div>
+          </button>
+
+          <!-- <button class="Hotspot"
+            id="quietroom3"
+            slot="hotspot-quietroom3"
+            data-position="42.5m 1.5m 35m"
+            data-normal="0m 1m 0m">
+          <div class="F9">Quiet Rooms</div> -->
+
+          <!-- <button class="Hotspot"
+            id="photocopy1"
+            slot="hotspot-photocopy1"
+            data-position="26m 1.5m 30m"
+            data-normal="0m 1m 0m">
+          <div class="F9">Photocopy</div> -->
+
+          <!-- <button class="Hotspot"
+            id="meeting1"
+            slot="hotspot-meeting1"
+            data-position="31.5m 1.5m 30m"
+            data-normal="0m 1m 0m">
+          <div class="F9">Meeting</div> -->
+
+          <!-- <button class="Hotspot"
+            id="photocopy2"
+            slot="hotspot-photocopy2"
+            data-position="42.5m 1.5m 47.5m"
+            data-normal="0m 1m 0m">
+          <div class="F9">Photocopy</div>
+
+          <button class="Hotspot"
+            id="meeting2"
+            slot="hotspot-meeting2"
+            data-position="42.5m 1.5m 43.5m"
+            data-normal="0m 1m 0m">
+          <div class="F9">Meeting</div>
+
+          <button class="Hotspot"
+            id="snrmgrstrategicrelations"
+            slot="hotspot-snrmgrstrategicrelations"
+            data-position="53m 1.5m 54m"
+            data-normal="0m 1m 0m">
+          <div class="F9">Senior Manager Strategic Relations</div>
+
+          <button class="Hotspot"
+            id="headofdep"
+            slot="hotspot-headofdep"
+            data-position="47.5m 1.5m 54m"
+            data-normal="0m 1m 0m">
+          <div class="F9">Head of Dep</div>
+          
+          <button class="Hotspot"
+            id="hr"
+            slot="hotspot-hr"
+            data-position="42.5m 1.5m 54m"
+            data-normal="0m 1m 0m">
+          <div class="F9">HR</div>
+                    
+          <button class="Hotspot"
+            id="hoc"
+            slot="hotspot-hoc"
+            data-position="36.5m 1.5m 54m"
+            data-normal="0m 1m 0m">
+          <div class="F9">Head of Campus</div>
+                    
+          <button class="Hotspot"
+            id="boardroom"
+            slot="hotspot-boardroom"
+            data-position="31m 1.5m 53m"
+            data-normal="0m 1m 0m">
+          <div class="F9">Board Room</div>
+
+          <button class="Hotspot"
+            id="meeting3"
+            slot="hotspot-meeting3"
+            data-position="31m 1.5m 48m"
+            data-normal="0m 1m 0m">
+          <div class="F9">Meeting</div>
+
+          <button class="Hotspot"
+            id="teachingoffice"
+            slot="hotspot-teachingoffice"
+            data-position="50m 1.5m 26.5m"
+            data-normal="0m 1m 0m">
+          <div class="F9">Teaching Office</div> -->
+
+          <!-- <button class="Hotspot"
+            id="WC9-1"
+            slot="hotspot-WC9-1"
+            data-position="18m 1.5m 43.5m"
+            data-normal="0m 1m 0m">
+          <div class="F9">WC</div>
+
+          <button class="Hotspot"
+            id="WC9-2"
+            slot="hotspot-WC9-2"
+            data-position="18m 1.5m 34.5m"
+            data-normal="0m 1m 0m">
+          <div class="F9">WC</div> -->
+          <!-- Floor 10 -->
+          <button class="Hotspot"
+            id="class10-004"
+            slot="hotspot-class10-004"
+            data-position="24m 1.5m 51m"
+            data-normal="0m 1m 0m">
+          <div class="F10 filterItem academics">
+            <a href="TH_Management_Classroom_detail.html">T&H Management Classroom</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="10-maclab"
+            slot="hotspot-10-maclab"
+            data-position="24m 1.5m 27m"
+            data-normal="0m 1m 0m">
+          <div class="F10 filterItem tech">
+            <a href="">Mac Lab</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="lab10-003"
+            slot="hotspot-lab10-003"
+            data-position="35.5m 1.5m 51m"
+            data-normal="0m 1m 0m">
+          <div class="F10 filterItem tech">
+            <a href="">Windows Lab</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="lab10-002"
+            slot="hotspot-lab10-002"
+            data-position="35.5m 1.5m 27m"
+            data-normal="0m 1m 0m">
+          <div class="F10 filterItem tech">
+            <a href="">Windows Lab</a>
+          </div>
+          </button>
+
+          <!-- <button class="Hotspot"
+            id="WC10-1"
+            slot="hotspot-WC10-1"
+            data-position="18m 1.5m 43.5m"
+            data-normal="0m 1m 0m">
+          <div class="F10">WC</div>
+
+          <button class="Hotspot"
+            id="WC10-2"
+            slot="hotspot-WC10-2"
+            data-position="18m 1.5m 34.5m"
+            data-normal="0m 1m 0m">
+          <div class="F10">WC</div> -->
+          <!-- Floor 14 -->
+          <button class="Hotspot"
+            id="class14-001"
+            slot="hotspot-class14-001"
+            data-position="22m 1.5m 24m"
+            data-normal="0m 1m 0m">
+          <div class="F14 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="class14-002"
+            slot="hotspot-class14-002"
+            data-position="37m 1.5m 24m"
+            data-normal="0m 1m 0m">
+          <div class="F14 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="class14-003"
+            slot="hotspot-class14-003"
+            data-position="52m 1.5m 39.5m"
+            data-normal="0m 1m 0m">
+          <div class="F14 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="class14-004"
+            slot="hotspot-class14-004"
+            data-position="37m 1.5m 54m"
+            data-normal="0m 1m 0m">
+          <div class="F14 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
+
+          <button class="Hotspot"
+            id="class14-005"
+            slot="hotspot-class14-005"
+            data-position="22m 1.5m 54m"
+            data-normal="0m 1m 0m">
+          <div class="F14 filterItem academics">
+            <a href="room_detail.html">Classroom</a>
+          </div>
+          </button>
+
+          <!-- <button class="Hotspot"
+            id="WC14-1"
+            slot="hotspot-WC14-1"
+            data-position="18m 1.5m 43.5m"
+            data-normal="0m 1m 0m">
+          <div class="F14">WC</div>
+
+          <button class="Hotspot"
+            id="WC14-2"
+            slot="hotspot-WC14-2"
+            data-position="18m 1.5m 34.5m"
+            data-normal="0m 1m 0m">
+          <div class="F14">WC</div> -->
       </button>
         </model-viewer>
       </div>
@@ -480,74 +1003,79 @@
       <script src="script.js"></script>
       <script src="searchbar.js"></script>
       <script src="modelzoom.js"></script>
+      <script src="filter.js"></script>
     </main>
     <footer>
-      <div class="container-fluid w-100 footer-container">
-        <div class="container pt-5 footer-content">
-          <div class="filterlink" id="academics">
-            <span>
-              Academics Facilities
-            </span>
-            <ul>
-              <li>Room</li>
-              <li>Room</li>
-              <li>Room</li>
-              <li>Room</li>
-            </ul>
+        <div class="container-fluid w-100 footer-container">
+            <div class="container pt-5 footer-content">
+              <div class="filterlink" id="academics">
+                <span>
+                  Academics Facilities
+                </span>
+                <ul>
+                  <li><a href="room_detail.html" class="underlineAnimationFooter">Classroom</a></li>
+                  <li><a href="design_studio_detail.html" class="underlineAnimationFooter">Design Studio</a></li>
+                  <li><a href="TH_Management_Classroom_detail.html" class="underlineAnimationFooter">T&H Management Classroom</a></li>
+                  <li><a href="financial_detail.html" class="underlineAnimationFooter">Financial Trading Lab</a></li>
+                  <li><a href="collaboration_study_space_detail.html" class="underlineAnimationFooter">Collaboration Study Space</a></li>
+                  <li><a href="#" class="underlineAnimationFooter">Library</a></li>
+                </ul>
+              </div>
+              <div class="filterlink" id="technology">
+                <span>
+                  Technology Facilities
+                </span>
+                <ul>
+                  <li><a href="room_detail.html" class="underlineAnimationFooter">Mac Lab</a></li>
+                  <li><a href="room_detail.html" class="underlineAnimationFooter">Windows Lab</a></li>
+                  <li><a href="room_detail.html" class="underlineAnimationFooter">Duo OS Lab</a></li>
+                </ul>
+              </div>
+              <div class="filterlink" id="services"> 
+                <span>
+                  Student Services
+                </span>
+                <ul>
+                  <li><a href="reception_detail.html" class="underlineAnimationFooter">Reception</a></li>
+                  <li><a href="security_detail.html" class="underlineAnimationFooter">Security</a></li>
+                  <li><a href="teaching_n_research.html" class="underlineAnimationFooter">Teaching & Research</a></li>
+                  <li><a href="sas_detail.html" class="underlineAnimationFooter">Student Academic Success (SAS)</a></li>
+                  <li><a href="student_connect.html" class="underlineAnimationFooter">Student Connect</a></li>
+                  <li><a href="office_detail.html" class="underlineAnimationFooter">Office</a></li>
+                  <li><a href="sos_office_detail.html" class="underlineAnimationFooter">International Office</a></li>
+                  <li><a href="wellbeing_details.html" class="underlineAnimationFooter">Wellbeing</a></li>
+                </ul>
+              </div>
+              <div class="filterlink" id="recreational"> 
+                <span>
+                  Recreational Space
+                </span>
+                <ul>
+                  <li><a href="room_detail.html" class="underlineAnimationFooter">Innovation Hub</a></li>
+                  <li><a href="sport_center_detail.html" class="underlineAnimationFooter">Sport Center</a></li>
+                  <li><a href="student_space_detail.html" class="underlineAnimationFooter">Student Breakout Space</a></li>
+                  <li><a href="av_theatre_detail.html" class="underlineAnimationFooter">AV Theatre</a></li>
+                </ul>
+              </div>
+              <div id="social"> 
+                <span class="fs-2 fw-medium text-light">
+                  Our Socials
+                </span>
+                <span class="d-flex">
+                  <button type="btn"><a href="https://www.facebook.com/RMITUniversityVietnam" target="_blank"><i class="fa-brands fa-facebook"></i></a></button>
+                  <button type="btn"><a href="https://twitter.com/RMITvietnam" target="_blank"><i class="fa-brands fa-twitter"></i></a></button>
+                  <button type="btn"><a href="https://www.instagram.com/rmituniversityvietnam/" target="_blank"><i class="fa-brands fa-instagram"></i></a></button>
+                  <button type="btn"><a href="https://www.linkedin.com/company/rmit-university-vietnam" target="_blank"><i class="fa-brands fa-linkedin"></i></a></button>
+                  <button type="btn"><a href="https://www.youtube.com/c/RMITUniversityVietnam" target="_blank"><i class="fa-brands fa-youtube"></i></a></button>
+                </span>
+              </div>
+              <div id="copyright"> 
+                <span class="text-light">
+                  Copyright © 2023 RMIT University
+                </span>
+              </div>
+            </div>
           </div>
-          <div class="filterlink" id="technology">
-            <span>
-              Technology Facilities
-            </span>
-            <ul>
-              <li>Room</li>
-              <li>Room</li>
-              <li>Room</li>
-              <li>Room</li>
-              <li>Room</li>
-              <li>Room</li>
-            </ul>
-          </div>
-          <div class="filterlink" id="services"> 
-            <span>
-              Student Services
-            </span>
-            <ul>
-              <li>Room</li>
-              <li>Room</li>
-              <li>Room</li>
-              <li>Room</li>
-              <li>Room</li>
-            </ul>
-          </div>
-          <div class="filterlink" id="recreational"> 
-            <span>
-              Recreational Space
-            </span>
-            <ul>
-              <li>Room</li>
-              <li>Room</li>
-            </ul>
-          </div>
-          <div id="social"> 
-            <span class="fs-2 fw-medium text-light">
-              Our Socials
-            </span>
-            <span class="d-flex">
-              <button type="btn"><a href="https://www.facebook.com/RMITUniversityVietnam" target="_blank"><i class="fa-brands fa-facebook"></i></a></button>
-              <button type="btn"><a href="https://twitter.com/RMITvietnam" target="_blank"><i class="fa-brands fa-twitter"></i></a></button>
-              <button type="btn"><a href="https://www.instagram.com/rmituniversityvietnam/" target="_blank"><i class="fa-brands fa-instagram"></i></a></button>
-              <button type="btn"><a href="https://www.linkedin.com/company/rmit-university-vietnam" target="_blank"><i class="fa-brands fa-linkedin"></i></a></button>
-              <button type="btn"><a href="https://www.youtube.com/c/RMITUniversityVietnam" target="_blank"><i class="fa-brands fa-youtube"></i></a></button>
-            </span>
-          </div>
-          <div id="copyright"> 
-            <span class="text-light">
-              Copyright © 2023 RMIT University
-            </span>
-          </div>
-        </div>
-      </div>
     </footer>
   </body>
 </html>

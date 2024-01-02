@@ -19,7 +19,7 @@ let keywords = [
     'AV Theatre',
     'Student Connect',
     'Wellbeing',
-    'Office',
+    'International Office',
   ];
   
   const resultsBox = document.querySelector(".result-box");
@@ -32,7 +32,6 @@ let keywords = [
       result = keywords.filter((keyword)=>{
         return keyword.toLowerCase().includes(input.toLowerCase());
       });
-      console.log(result)
     }
     display(result);
   
@@ -64,7 +63,7 @@ let keywords = [
     'Security': 'security.html',
     'Design Studio': 'design-studio.html',
     'Collaboration Study Space': 'student_space_detail.html',
-    'Teacher & Research': 'teacher-research.html',
+    'Teacher & Research': 'teacher_n_research.html',
     'T&H Management Classroom': 'th-management-classroom.html',
     'SAS': 'sas_detail.html',
     'Financial Trading Lab': 'financial_detail.html',
@@ -72,7 +71,7 @@ let keywords = [
     'AV Theatre': 'av_theatre_detail.html',
     'Student Connect': 'student_connect.html',
     'Wellbeing': 'wellbeing_details.html',
-    'Office': 'office_detail.html',
+    'International Office': 'sos_office_detail.html',
   };
   
   resultsBox.addEventListener('click', function(e){
