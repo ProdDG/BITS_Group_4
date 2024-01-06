@@ -120,6 +120,13 @@ button.carousel-control-next{
     background: linear-gradient(to left,rgba(0,0,0,0.5),rgba(0,0,0,0));
 }
 
+.sub-img {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
 .description img{
     max-width: 100%;
     height: auto;
