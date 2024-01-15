@@ -53,7 +53,7 @@ let keywords = [
   var urlMapping = {
     'Library': 'library.html',
     'Classroom': 'room_detail.html',
-    'Mac Lab': 'Mac-lab.html',
+    'Mac Lab': 'Mac_lab.html',
     'Windows Lab': 'Windows-Lab.html',
     'Duo OS Lab': 'duo-os-lab.html',
     'Self Study Room': 'self-study-room.html',
